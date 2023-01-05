@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Windows搭建我的世界服务器教程</title>
+      <link href="/2023/01/05/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/wdsjfwq/"/>
+      <url>/2023/01/05/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/wdsjfwq/</url>
+      
+        <content type="html"><![CDATA[<h1 id="准备"><a class="markdownIt-Anchor" href="#准备">#</a> 准备</h1><p>首先你得有台服务器（已经有的可以忽略），推荐阿里云、腾讯云、优刻得和华为云的</p><p>如果你是新用户有优惠，建议能买多长时间就买多长时间，因为优惠价的服务器到期后续费很贵的，而且新用户优惠只能买一次，所以尽量买长时间点划算。</p><p>2 核 4G 内存 5 兆带宽的服务器大约可以同时在线 5 到 10 人，4 核 8G 10 兆的服务器大约可以同时在线 10 到 30 人。1.18.2 版的配置要求更高了，最低得 4G 内存，建议 8G 内存。</p><p>购买服务器后选择安装 Windows Server 2019 或 2016 系统，然后用 RDP（远程桌面）登陆服务器。</p><p>如下图所示，搜索 RDP 然后打开，输入你刚买的服务器的 IP，然后输入你设的账号密码，如果不知道密码就到服务器控制台重置一下密码。账号一般默认是：administrator<br> 安装 JAVA 环境<br> 1.18.2 版需要 JDK17 版，需要安装其他版本 JDK 的看这篇文章：<a href="https://blog.zeruns.tech/archives/653.html">https://blog.zeruns.tech/archives/653.html</a></p><p>1.17 版需要 JDK16，1.16 版需要 JDK11，1.16 以下的版本需要 JDK8。</p><p>在服务器里打开 IE 浏览器，打开链接：<a href="https://url.zeruns.tech/Tuna_JDK">https://url.zeruns.tech/Tuna_JDK</a></p><p>进入到下图所示目录里，然后下载红框里的.msi 后缀的 JDK17 安装包，点击另存为，自己选一个目录保存，或放到桌面。</p><p>然后双击打开刚刚下载的 JDK 安装包，一直点下一步就行。<br>端口开放<br>游戏服务器默认端口是 25565，需要开放 25565 端口，如果你是要用其他端口就开放对应端口。</p><p>如果你使用阿里云，腾讯云或者其他云服务商，请进入控制台到防火墙安全组策略，放行以上端口。</p><p>或者放行全部端口，入和出方向都要</p><p>然后还要关闭服务器系统自带防火墙或设置防火墙开放你要用的端口，win 系统默认关闭所有端口，除了 3389。</p><p>打开控制面板，点击 系统和安全。</p><p>然后接着点击 Windows Defender 防火墙 → 启用或关闭 Windows Defender 防火墙。<br>然后将这两个都选择关闭，点击确定即可。<br>安装 MC 官方服务端<br>安装官方服务端 和下面的 安装 forge 版服务端 选其中一个执行就行。</p><p>在服务器中下载 Minecraft1.18.2 服务端核心：</p><p>官网下载地址：<a href="https://www.minecraft.net/zh-hans/download/server">https://www.minecraft.net/zh-hans/download/server</a><br> 在服务器中找个地方新建一个文件夹做为 mc 服务端运行的目录，文件夹名字随便设，最好不要带中文。然后将上面下载的服务端核心文件 server.jar 复制到刚刚创建的文件夹里，在文件夹里新建一个文本文档 run.txt。</p><p>接着打开新建的 run.txt，在里面输入下面的启动命令，然后保存</p><pre><code>java -server -jar server.jar noguipause</code></pre><p>接着将 run.txt 文件重命名为 run.bat，然后双击运行 run.bat 即可启动服务端。<br>待运行完成后，打开 eula.txt 文件将 false 改成 true ，然后保存，接着再运行一次 run.bat，出现如下图所示信息即开服成功。若需要修改服务器端口和关闭正版验证之类的可以修改 server.properties 文件，然后重启服务端。</p><p>到这里就开服完成了，可以进入游戏了，在游戏中添加服务器，直接输入你服务器的 IP 即可，如果修改了端口就需要加上端口。</p><p>安装 forge 版服务端<br>安装 forge 版服务端 和上面的 安装官方服务端 选其中一个执行就行。</p><p>forge 版的支持安装 MOD。</p><p>在服务器中下载 forge 版 1.18.2 服务端安装器：</p><p>官网下载地址：<a href="https://files.minecraftforge.net/net/minecraftforge/forge/">https://files.minecraftforge.net/net/minecraftforge/forge/</a><br> 安装和上述步骤一样，不再阐述<br>到这里就开服完成了，可以进入游戏了，在游戏中添加服务器，直接输入你服务器的 IP 即可，如果修改了端口就需要加上端口。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>保姆级LGSM搭建CSGO服务器（Linux系统）</title>
       <link href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/%E4%BF%9D%E5%A7%86%E7%BA%A7LGSM%E6%90%AD%E5%BB%BACSGO%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Linux%E7%B3%BB%E7%BB%9F%EF%BC%89/"/>
       <url>/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/%E4%BF%9D%E5%A7%86%E7%BA%A7LGSM%E6%90%AD%E5%BB%BACSGO%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Linux%E7%B3%BB%E7%BB%9F%EF%BC%89/</url>
@@ -20,7 +45,7 @@
       
         <tags>
             
-            <tag> 胡言乱 </tag>
+            <tag> 胡言乱语 </tag>
             
         </tags>
       
