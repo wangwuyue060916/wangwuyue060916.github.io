@@ -54,6 +54,33 @@
     
     
     <entry>
+      <title>Linux切换为root用户</title>
+      <link href="/2022/12/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Linuxroot/"/>
+      <url>/2022/12/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Linuxroot/</url>
+      
+        <content type="html"><![CDATA[<h2 id="linux如何切换为root用户"><a class="markdownIt-Anchor" href="#linux如何切换为root用户">#</a> Linux 如何切换为 root 用户</h2><p>这个场景我们经常碰见，需要切换用户，或者修改得到 root 密码。</p><ol><li>命令切换为 root 用户 sudo su - root</li><li>当用户具有 sudo 权限，就可以直接修改 root 密码，方法如下： sudo passwd root</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>宝塔面板Nginx开启Brotli压缩，提高网站加载速度</title>
       <link href="/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/"/>
       <url>/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/</url>
