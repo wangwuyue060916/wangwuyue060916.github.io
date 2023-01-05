@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>宝塔面板Nginx开启Brotli压缩，提高网站加载速度 | 长相思の博客</title><meta name="author" content="长相思兮长相忆"><meta name="copyright" content="长相思兮长相忆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="# 前言 Google 认为互联网用户的时间是宝贵的，他们的时间不应该消耗在漫长的网页加载中，因此在 2015 年 9 月 Google 推出了无损压缩算法 Brotli。Brotli 通过变种的 LZ77 算法、Huffman 编码以及二阶文本建模等方式进行数据压缩，与 Gzip 相比效率提升约 17-25%。这里简单说一下如何在宝塔面板 Nginx 开启 Brotli 压缩。 # 下载 Bro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="宝塔面板Nginx开启Brotli压缩，提高网站加载速度">
+<meta property="og:url" content="https://blog.091688.xyz/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/index.html">
+<meta property="og:site_name" content="长相思の博客">
+<meta property="og:description" content="# 前言 Google 认为互联网用户的时间是宝贵的，他们的时间不应该消耗在漫长的网页加载中，因此在 2015 年 9 月 Google 推出了无损压缩算法 Brotli。Brotli 通过变种的 LZ77 算法、Huffman 编码以及二阶文本建模等方式进行数据压缩，与 Gzip 相比效率提升约 17-25%。这里简单说一下如何在宝塔面板 Nginx 开启 Brotli 压缩。 # 下载 Bro">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-57jk33.webp">
+<meta property="article:published_time" content="2022-11-20T03:46:09.000Z">
+<meta property="article:modified_time" content="2023-01-05T06:46:54.653Z">
+<meta property="article:author" content="长相思兮长相忆">
+<meta property="article:tag" content="技术杂谈">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-57jk33.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.091688.xyz/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '宝塔面板Nginx开启Brotli压缩，提高网站加载速度',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-05 14:46:54'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://www.hualigs.cn/image/63b3f4fcac5e6.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.wgzdy.top/wp-content/uploads//wallhaven-57jk33.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">长相思の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">宝塔面板Nginx开启Brotli压缩，提高网站加载速度</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-20T03:46:09.000Z" title="发表于 2022-11-20 11:46:09">2022-11-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-05T06:46:54.653Z" title="更新于 2023-01-05 14:46:54">2023-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">技术杂谈</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="宝塔面板Nginx开启Brotli压缩，提高网站加载速度"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a class="markdownIt-Anchor" href="#前言">#</a> 前言</h1>
+<p>Google 认为互联网用户的时间是宝贵的，他们的时间不应该消耗在漫长的网页加载中，因此在 2015 年 9 月 Google 推出了无损压缩算法 Brotli。Brotli 通过变种的 LZ77 算法、Huffman 编码以及二阶文本建模等方式进行数据压缩，与 Gzip 相比效率提升约 17-25%。这里简单说一下如何在宝塔面板 Nginx 开启 Brotli 压缩。</p>
+<h2 id="下载brotli"><a class="markdownIt-Anchor" href="#下载brotli">#</a> 下载 Brotli</h2>
+<p>cd /www/server<br>
+# 下载 brotli<br>
+git clone ![img](file:///C:\Users\admin\AppData\Roaming\Tencent\QQTempSys[5UQ[BL(6~BS2JV6W}N6[%S.png)<a target="_blank" rel="noopener" href="https://github.com/google/ngx_brotli.git">https://github.com/google/ngx_brotli.git</a><br>
+cd ngx_brotli<br>
+# 更新 brotli<br>
+git submodule update --init</p>
+<h2 id="配置nginx-brotli模块"><a class="markdownIt-Anchor" href="#配置nginx-brotli模块">#</a> 配置 Nginx Brotli 模块</h2>
+<p>1. 登录宝塔管理面板 -&gt; 软件商店 -&gt; 已安装 找到 Nginx <sub>不要犹豫</sub> (还是推荐备份下系统快照) 直接点击 卸载！</p>
+<h2 id="宝塔面板nginx开启brotli压缩提升网站加载速度"><a class="markdownIt-Anchor" href="#宝塔面板nginx开启brotli压缩提升网站加载速度">#</a> 宝塔面板 Nginx 开启 Brotli 压缩，提升网站加载速度</h2>
+<p>2. 点击 软件商店 -&gt; 运行环境 找到 Nginx 不要犹豫 点击安装在弹出的窗口中选择编译安装 点击添加自定义模块</p>
+<p>模块名称:ngx_brotli<br>
+ 模块描述:ngx_brotli<br>
+ 模块参数:–add-module=/www/server/ngx_brotli<br>
+ 填写完成后返回安装选项！[img](file:///C:\Users\admin\AppData\Roaming\Tencent\QQTempSys\FZ~{7VEC09VVKFU7J7X3CT8.png) 刚刚添加的模块提交，等待安装完成即可！</p>
+<p>宝塔面板 Nginx 开启 Brotli 压缩，提升网站加载速度</p>
+<h2 id="安装nginx"><a class="markdownIt-Anchor" href="#安装nginx">#</a> 安装 Nginx</h2>
+<p>宝塔面板 Nginx 开启 Brotli 压缩，提升网站加载速度</p>
+<p>添加自定义模块</p>
+<h2 id="给网站开启brotli压缩"><a class="markdownIt-Anchor" href="#给网站开启brotli压缩">#</a> 给网站开启 brotli 压缩</h2>
+<p>软件商店找到 Nginx 点击设置选择配置修改将以下代码插入 http 段保存即可。Tips: Britli 和 Gzip 可以共存无需关闭 Gzip</p>
+<p># brotli<br>
+brotli on;<br>
+brotli_comp_level 1;<br>
+brotli_buffers 16 8k;<br>
+brotli_min_length 20;<br>
+brotli_types text/xml text/plain text/css application/javascript application/x-javascript applicatio</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blog.091688.xyz">长相思兮长相忆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.091688.xyz/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/">https://blog.091688.xyz/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.091688.xyz" target="_blank">长相思の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">技术杂谈</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-57jk33.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86https%E5%BF%BD%E7%95%A5%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/"><img class="prev-cover" src="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-l338xr.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Nginx反向代理https忽略证书错误</div></div></a></div><div class="next-post pull-right"><a href="/2022/11/05/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/wdsjfwq/"><img class="next-cover" src="https://cdn.wgzdy.top/wp-content/uploads//Screenshot_20220718_135123_tv.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Windows搭建我的世界服务器教程</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/11/05/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/wdsjfwq/" title="Windows搭建我的世界服务器教程"><img class="cover" src="https://cdn.wgzdy.top/wp-content/uploads//Screenshot_20220718_135123_tv.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-05</div><div class="title">Windows搭建我的世界服务器教程</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://www.hualigs.cn/image/63b3f4fcac5e6.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">长相思兮长相忆</div><div class="author-info__description">一个有爱的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客，这里会分享日常哦！<img src="https://s1.xptou.com/2023/01/05/63b61d1678e98.gif"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDbrotli"><span class="toc-number">1.1.</span> <span class="toc-text"> 下载 Brotli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEnginx-brotli%E6%A8%A1%E5%9D%97"><span class="toc-number">1.2.</span> <span class="toc-text"> 配置 Nginx Brotli 模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BFnginx%E5%BC%80%E5%90%AFbrotli%E5%8E%8B%E7%BC%A9%E6%8F%90%E5%8D%87%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6"><span class="toc-number">1.3.</span> <span class="toc-text"> 宝塔面板 Nginx 开启 Brotli 压缩，提升网站加载速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nginx"><span class="toc-number">1.4.</span> <span class="toc-text"> 安装 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E7%BD%91%E7%AB%99%E5%BC%80%E5%90%AFbrotli%E5%8E%8B%E7%BC%A9"><span class="toc-number">1.5.</span> <span class="toc-text"> 给网站开启 brotli 压缩</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/%E4%BF%9D%E5%A7%86%E7%BA%A7LGSM%E6%90%AD%E5%BB%BACSGO%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Linux%E7%B3%BB%E7%BB%9F%EF%BC%89/" title="保姆级LGSM搭建CSGO服务器（Linux系统）"><img src="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-z82jeg.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="保姆级LGSM搭建CSGO服务器（Linux系统）"/></a><div class="content"><a class="title" href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/%E4%BF%9D%E5%A7%86%E7%BA%A7LGSM%E6%90%AD%E5%BB%BACSGO%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Linux%E7%B3%BB%E7%BB%9F%EF%BC%89/" title="保姆级LGSM搭建CSGO服务器（Linux系统）">保姆级LGSM搭建CSGO服务器（Linux系统）</a><time datetime="2023-01-04T13:34:18.000Z" title="发表于 2023-01-04 21:34:18">2023-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86https%E5%BF%BD%E7%95%A5%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/" title="Nginx反向代理https忽略证书错误"><img src="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-l338xr.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx反向代理https忽略证书错误"/></a><div class="content"><a class="title" href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86https%E5%BF%BD%E7%95%A5%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/" title="Nginx反向代理https忽略证书错误">Nginx反向代理https忽略证书错误</a><time datetime="2023-01-04T06:20:43.000Z" title="发表于 2023-01-04 14:20:43">2023-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/" title="宝塔面板Nginx开启Brotli压缩，提高网站加载速度"><img src="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-57jk33.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="宝塔面板Nginx开启Brotli压缩，提高网站加载速度"/></a><div class="content"><a class="title" href="/2022/11/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Brotli/" title="宝塔面板Nginx开启Brotli压缩，提高网站加载速度">宝塔面板Nginx开启Brotli压缩，提高网站加载速度</a><time datetime="2022-11-20T03:46:09.000Z" title="发表于 2022-11-20 11:46:09">2022-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/05/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/wdsjfwq/" title="Windows搭建我的世界服务器教程"><img src="https://cdn.wgzdy.top/wp-content/uploads//Screenshot_20220718_135123_tv.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows搭建我的世界服务器教程"/></a><div class="content"><a class="title" href="/2022/11/05/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/wdsjfwq/" title="Windows搭建我的世界服务器教程">Windows搭建我的世界服务器教程</a><time datetime="2022-11-05T03:46:09.000Z" title="发表于 2022-11-05 11:46:09">2022-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/20/%E5%A5%BD%E7%89%A9%E5%AE%89%E5%88%A9/PearAPI/" title="Pear API-分享站点"><img src="https://cdn.wgzdy.top/wp-content/uploads//wallhaven-g73wgq.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pear API-分享站点"/></a><div class="content"><a class="title" href="/2022/10/20/%E5%A5%BD%E7%89%A9%E5%AE%89%E5%88%A9/PearAPI/" title="Pear API-分享站点">Pear API-分享站点</a><time datetime="2022-10-20T00:49:50.000Z" title="发表于 2022-10-20 08:49:50">2022-10-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By 长相思兮长相忆</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20230222"><img class="icp-icon" src="https://icp.gov.moe/images/ico64.png"><span>萌ICP备20230222号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'HrOfQGYhg2s7UEXc1URHfyvT-gzGzoHsz',
+      appKey: 'gXa1o7mlD4K10twnFqntzuJf',
+      avatar: 'monsterid',
+      serverURLs: 'https://hrofqgyh.lc-cn-n1-shared.com',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
