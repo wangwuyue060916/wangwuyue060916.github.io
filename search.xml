@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>免费域名申请-Freenom</title>
+      <link href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/freenom/"/>
+      <url>/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/freenom/</url>
+      
+        <content type="html"><![CDATA[<h1 id="开始"><a class="markdownIt-Anchor" href="#开始">#</a> 开始</h1><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_JEFXJ8E79HQ2QJH.png" alt=""></p><p>注意你的 IP 地址要与你注册的账号填写的地区一致，并且确保你的浏览器能够进行谷歌验证</p><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_WK5FVK8ES6TB6NM.png" alt=""></p><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_QYX87NT3QKWV2QW.png" alt=""></p><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_PB6DKPBQJG4T79P.png" alt=""></p><p>信息可以随便填</p><h2 id="注册域名"><a class="markdownIt-Anchor" href="#注册域名">#</a> 注册域名</h2><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_MY7CDEGTYTBKVK8.png" alt=""></p><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_V7VPAYPTG6ZB66Q.png" alt=""></p><h2 id=""><a class="markdownIt-Anchor" href="#">#</a> <img src="https://bbs.csgocn.net/upload/attach/202206/47_V7VPAYPTG6ZB66Q.png" alt=""></h2><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_4C3GR5NVAQNNAD8.png" alt=""></p><p>此时注册完成</p><h2 id="域名服务器换为cloudflare"><a class="markdownIt-Anchor" href="#域名服务器换为cloudflare">#</a> 域名服务器换为 Cloudflare</h2><h3 id="进入管理域名"><a class="markdownIt-Anchor" href="#进入管理域名">#</a> 进入管理域名</h3><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_Q23WANJ8YPW8V4Y.png" alt=""></p><h3 id="进入域名服务器"><a class="markdownIt-Anchor" href="#进入域名服务器">#</a> 进入域名服务器</h3><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_ZBBEAC5F8PW6577.png" alt=""></p><p>我们可以看到可以自选域名服务器</p><h3 id="随后注册一个cloudflare"><a class="markdownIt-Anchor" href="#随后注册一个cloudflare">#</a> 随后注册一个 cloudflare</h3><p><a href="https://www.cloudflare.com/zh-cn/">Cloudflare 官网</a><br>注册较为简单，有中文页面，故此不再说明</p><h3 id="登录cloudflare"><a class="markdownIt-Anchor" href="#登录cloudflare">#</a> 登录 Cloudflare</h3><p>添加站点将你的域名输入</p><p>用免费套餐</p><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_6QHTRBTCESE4Q5V.png" alt=""></p><p>将上边的两个 Cloudflare 复制到上边的 Freenom 域名服务器 1 和 2 中，然后更改，需要一定时间生效此时我们不再用到 Freenom</p><p><img src="https://bbs.csgocn.net/upload/attach/202206/47_82UZU7FS4Q4WAJ8.png" alt=""></p><p>请注意一定要把上边的代理状态点灰</p><p>填上 IP 地址</p><p>名称随便填，如果你填 csgo</p><p>那么你用到的就是 csgo.xxxxx.xx 域名</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 胡言乱语 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 胡言乱语 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>保姆级LGSM搭建CSGO服务器（Linux系统）</title>
       <link href="/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/%E4%BF%9D%E5%A7%86%E7%BA%A7LGSM%E6%90%AD%E5%BB%BACSGO%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Linux%E7%B3%BB%E7%BB%9F%EF%BC%89/"/>
       <url>/2023/01/04/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/%E4%BF%9D%E5%A7%86%E7%BA%A7LGSM%E6%90%AD%E5%BB%BACSGO%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Linux%E7%B3%BB%E7%BB%9F%EF%BC%89/</url>
@@ -54,6 +79,33 @@
     
     
     <entry>
+      <title>Linux常用命令大全整理</title>
+      <link href="/2023/01/01/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Linuxcyzl/"/>
+      <url>/2023/01/01/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Linuxcyzl/</url>
+      
+        <content type="html"><![CDATA[<h1 id="linux常用命令整理"><a class="markdownIt-Anchor" href="#linux常用命令整理">#</a> Linux 常用命令整理</h1><p>最近在学习 Linux，感觉还不错。我觉得 Linux 相比 windows 比较麻烦的就是很多东西都要用命令来控制，我将我了解到的命令整理一下</p><h2 id="系统信息"><a class="markdownIt-Anchor" href="#系统信息">#</a> 系统信息</h2><p>arch 显示机器的处理器架构<br> uname -m 显示机器的处理器架构<br> uname -r 显示正在使用的内核版本<br> dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)<br> hdparm -i /dev/hda 罗列一个磁盘的架构特性<br> hdparm -tT /dev/sda 在磁盘上执行测试性读取操作<br> cat /proc/cpuinfo 显示 CPU info 的信息<br> cat /proc/interrupts 显示中断<br> cat /proc/meminfo 校验内存使用<br> cat /proc/swaps 显示哪些 swap 被使用<br> cat /proc/version 显示内核的版本<br> cat /proc/net/dev 显示网络适配器及统计<br> cat /proc/mounts 显示已加载的文件系统<br> lspci -tv 罗列 PCI 设备<br> lsusb -tv 显示 USB 设备<br> date 显示系统日期<br> cal 2007 显示 2007 年的日历表<br> date  设置日期和时间 - 月日时分年。秒<br> clock -w 将时间修改保存到 BIOS</p><h2 id="关机-系统的关机-重启以及登出"><a class="markdownIt-Anchor" href="#关机-系统的关机-重启以及登出">#</a> 关机 (系统的关机、重启以及登出)</h2><p>shutdown -h now 关闭系统<br> init 0 关闭系统<br> telinit 0 关闭系统<br> shutdown -h hours:minutes &amp; 按预定时间关闭系统<br> shutdown -c 取消按预定时间关闭系统<br> shutdown -r now 重启<br> reboot 重启<br> logout 注销</p><h2 id="文件搜索"><a class="markdownIt-Anchor" href="#文件搜索">#</a> 文件搜索</h2><p>find /-name cxs1 从 ‘/’ 开始进入根文件系统搜索文件和目录<br> find /-user user1 搜索属于用户 ‘user1’ 的文件和目录<br> find /home/user1 -name *.bin 在目录 ‘/home/user1’ 中搜索带有’.bin’ 结尾的文件<br> find /usr/bin -type f -atime +100 搜索在过去 100 天内未被使用过的执行文件<br> find /usr/bin -type f -mtime -10 搜索在 10 天内被创建或者修改过的文件<br> find /-name *.rpm -exec chmod 755 ‘{}’ ; 搜索以 ‘.rpm’ 结尾的文件并定义其权限<br> find /-xdev -name *.rpm 搜索以 ‘.rpm’ 结尾的文件，忽略光驱、捷盘等可移动设备<br> locate *.ps 寻找以 ‘.ps’ 结尾的文件 - 先运行 ‘updatedb’ 命令<br> whereis halt 显示一个二进制文件、源码或 man 的位置<br> which halt 显示一个二进制文件或可执行文件的完整路径</p><h2 id="磁盘空间"><a class="markdownIt-Anchor" href="#磁盘空间">#</a> 磁盘空间</h2><p>df -h 显示已经挂载的分区列表<br> ls -lSr |more 以尺寸大小排列文件和目录<br> du -sh cxs1 估算目录 ‘cxs1’ 已经使用的磁盘空间’<br>du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小<br> rpm -q -a --qf ‘%10 {SIZE} t%{NAME} n’ | sort -k1,1n 以大小为依据依次显示已安装的 rpm 包所使用的空间 (fedora, redhat 类系统)<br>dpkg-query -W -f=’<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>I</mi><mi>n</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>e</mi><mi>d</mi><mo>−</mo><mi>S</mi><mi>i</mi><mi>z</mi><mi>e</mi><mo separator="true">;</mo><mn>10</mn></mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">{Installed-Size;10}t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">n</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord mathnormal">e</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span></span><span class="mord mathnormal">t</span></span></span></span> {Package} n’ | sort -k1,1n 以大小为依据显示已安装的 deb 包所使用的空间 (<a href="https://so.csdn.net/so/search?q=ubuntu&amp;spm=1001.2101.3001.7020">ubuntu</a>, debian 类系统)</p><h2 id="文件和目录"><a class="markdownIt-Anchor" href="#文件和目录">#</a> 文件和目录</h2><p>cd /home 进入 ‘/home’ 目录’<br>cd … 返回上一级目录<br> cd …/… 返回上两级目录<br> cd 进入个人的主目录<br> cd ~user1 进入个人的主目录<br> cd - 返回上次所在的目录<br> pwd 显示工作路径<br> ls 查看目录中的文件<br> ls -F 查看目录中的文件<br> ls -l 显示文件和目录的详细资料<br> ls -a 显示隐藏文件<br> ls <em>[0-9]</em> 显示包含数字的文件名和目录名<br> tree 显示文件和目录由根目录开始的树形结构<br> lstree 显示文件和目录由根目录开始的树形结构<br> mkcxs cxs1 创建一个叫做 ‘cxs1’ 的目录’<br>mkcxs cxs1 cxs2 同时创建两个目录<br> mkcxs -p /tmp/cxs1/cxs2 创建一个目录树<br> rm -f cxs1 删除一个叫做 ‘cxs1’ 的文件’<br>rmcxs cxs1 删除一个叫做 ‘cxs1’ 的目录’<br>rm -rf cxs1 删除一个叫做 ‘cxs1’ 的目录并同时删除其内容<br> rm -rf cxs1 cxs2 同时删除两个目录及它们的内容<br> mv cxs1 new_cxs 重命名 / 移动 一个目录<br> cp cxs1 cxs2 复制一个文件<br> cp cxs/* . 复制一个目录下的所有文件到当前工作目录<br> cp -a /tmp/cxs1 . 复制一个目录到当前工作目录<br> cp -a cxs1 cxs2 复制一个目录</p><p>cp -r cxs1 cxs2 复制一个目录及子目录<br> ln -s cxs1 lnk1 创建一个指向文件或目录的软链接<br> ln cxs1 lnk1 创建一个指向文件或目录的物理链接</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux切换为root用户</title>
       <link href="/2022/12/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Linuxroot/"/>
       <url>/2022/12/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Linuxroot/</url>
@@ -73,6 +125,62 @@
             <tag> 技术杂谈 </tag>
             
             <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSGO服务器一机多服的方法</title>
+      <link href="/2022/12/16/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/csgodf/"/>
+      <url>/2022/12/16/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/csgodf/</url>
+      
+        <content type="html"><![CDATA[<h1 id="csgo的一机多服的方法有2种"><a class="markdownIt-Anchor" href="#csgo的一机多服的方法有2种">#</a> CSGO 的一机多服的方法有 2 种.</h1><h2 id="方法一"><a class="markdownIt-Anchor" href="#方法一">#</a> 方法一:</h2><p>多份 server.cfg 来实现不同” 密钥” 开多服的效果，<br> 优点：节约磁盘空间，配置统一。所有服务器设置一次即可完成.<br> 缺点：每个服没有办法独立个性化，<br> 方法二：多份服务端，来实现不同” 密钥” 开多服的效果，<br> 优点：可以设置每个服务端不同的插件配置，<br> 缺点：每个服务端都需要单独设置.</p><p>具体使用哪种方法，完全根据个人的需求，<br> 例如<br>方法一：比较适合小固态硬盘，只有 120g 那种且只是单纯扩展服务器的数量，并不需要额外修改.<br> 方法二：比较适合需要对外出租的，每个客户对服务端需求不同，所以需要单独的服务端单独配置插件.</p><p>方法一的 CSGO 一机多服设置方法:<br> 需要准备 2 个启动脚本，2 个 server.cfg 的文件。当如你要创建更多个服务器，就准备更多个脚本和文件.</p><h3 id="第一步"><a class="markdownIt-Anchor" href="#第一步">#</a> 第一步</h3><p>路径:</p><p>D:\steamcmd\steamapps\common\Counter-Strike Global Offensive Beta – Dedicated Server<br> 复制代码</p><p>创建</p><h3 id="1服启动脚本bat"><a class="markdownIt-Anchor" href="#1服启动脚本bat">#</a> 1 服启动脚本.bat</h3><p>参数:</p><pre><code>@echo offcd /d %~dp0cd “D:\steamcmd\steamapps\common\Counter-Strike Global Offensive Beta – Dedicated Server”start srcds.exe -game csgo -console -ip 0.0.0.0 -usercon +game_type 0 +game_mode 0 +port 27015 +map de_dust2 -tickrate 128 +exec 1fserver.cfg -maxplayers_override 32 +mapgroup mg_active</code></pre><p>复制代码</p><h3 id="2服启动脚本bat"><a class="markdownIt-Anchor" href="#2服启动脚本bat">#</a> 2 服启动脚本.bat</h3><p>参数:</p><pre><code>@echo offcd /d %~dp0cd “D:\steamcmd\steamapps\common\Counter-Strike Global Offensive Beta – Dedicated Server”start srcds.exe -game csgo -console -ip 0.0.0.0 -usercon +game_type 0 +game_mode 0 +port 28015 +map de_dust2 -tickrate 128 +exec 2fserver.cfg -maxplayers_override 32 +mapgroup mg_active</code></pre><p>复制代码</p><p>脚本里添加关键参数：一个是加载 cfg 文件参数和一个端口参数，每个服务器的端口必须不同.<br>1 服的</p><pre><code>+exec 1fserver.cfg +port 27015</code></pre><p>复制代码</p><p>2 服的</p><pre><code>+exec 2fserver.cfg +port 28015</code></pre><p>复制代码</p><h2 id="第二步"><a class="markdownIt-Anchor" href="#第二步">#</a> 第二步:</h2><p>路径:</p><p>D:\steamcmd\steamapps\common\Counter-Strike Global Offensive Beta – Dedicated Server\csgo\cfg<br> 复制代码</p><p>创建:<br>1fserver.cfg 文件</p><p>// CSGO 服务器登录令牌<br> sv_setsteamaccount “1277D8D73CD8A8D224746686F7E9C026”<br>// 系统参数<br> hostname “<a href="http://xn--1Xiongtianqi-fv2z.cn">1 服 Xiongtianqi.cn</a>” // 服务器名称将显示在服务器浏览器中。<br>复制代码</p><p>2fserver.cfg 文件</p><p>// CSGO 服务器登录令牌</p><pre><code>sv_setsteamaccount “2277D8D73CD8A8D224746686F7E9C026”</code></pre><p>// 系统参数</p><pre><code>hostname “服务器名称”  //服务器名称将显示在服务器浏览器中。</code></pre><p>复制代码</p><p>这样启动 2 个脚本基本就完成了，2 个服除了名字和端口不同，其它配置完全一致。没办法不同.</p><h2 id="第三步"><a class="markdownIt-Anchor" href="#第三步">#</a> 第三步:</h2><p>启动 1 服和 2 服的开服脚本即可.</p><p>方法二的 CSGO 一机多服设置方法:<br> 第一步：只需要将原本的服务端复制一份，将服务端目录名字区分开，例如 1csgoserver 和 2csgoserver.<br> 第二步：将 1 服启动脚本和 2 服的启动脚本端口设置不同即可，例如：1 服的是 + port 27015 2 服的是 + port 28015<br> 第三步：2 个服务器的 server.cfg 设置不同的密钥，<br> 第四步：分别启动 2 个服务端的启动脚本，即可完成.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+          <category> CSGO </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+            <tag> CSGO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>非常简单的Windows系统命令</title>
+      <link href="/2022/12/03/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Windowsjd/"/>
+      <url>/2022/12/03/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/Windowsjd/</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录"><a class="markdownIt-Anchor" href="#目录">#</a> 目录</h1><h2 id="使用-win键其他键组合"><a class="markdownIt-Anchor" href="#使用-win键其他键组合">#</a> 使用 Win 键 + 其他键组合：</h2><p>Win 键：打开 “开始” 菜单</p><p>Win 键 + E：打开我的电脑</p><p>Win 键 + R：打开运行对话框</p><p>Win 键 + D：显示桌面</p><p>Win 键 + M：最小化所有窗口</p><p>Win 键 + X：Windows 移动中心，调节音量，屏幕亮度</p><p>Win 键 + Home：除了正在选择的窗口，其他窗口最小化</p><p>Win 键 + PAUSE BREAK：打开 “系统属性” 对话框</p><p>Win 键 +【+/-】：打开 Windows 放大、缩小功能</p><p>Win 键 + Pause：显示系统属性对话框</p><p>Win 键 + TAB：Aero 三维效果切换程序</p><p>Win 键 + 数字键：让位于任务栏上的程序打开（数字为序号）</p><p>Win 键 + P：选择一个演示文稿显示模式，可以用来关闭屏幕</p><p>Win 键 + L：锁定计算机，需要输入密码或者选择其他用户</p><p>Win 键 + T：多次按可以在多个程序间顺序切换</p><p>Win 键 + F：计算机搜索，可以搜索计算机里面所有文件</p><p>Win 键 +【←/→】：在屏幕左 / 右半个屏幕最大化</p><p>Win 键 +【↑/↓】：最大化 / 最小化</p><h2 id="简单指令"><a class="markdownIt-Anchor" href="#简单指令">#</a> 简单指令</h2><p>cmd------CMD 命令提示符</p><p>MSConfig------ 系统配置实用程序</p><p>regedit------ 注册表编辑器</p><p>notepad------ 打开记事本</p><p>calc------ 启动计算器</p><p>mstsc------ 远程桌面连接</p><p>services.msc------ 系统服务</p><p>gpedit.msc------ 组策略</p><p>shutdown------60 秒倒计时关机命令</p><p>Nslookup-------IP 地址侦测器</p><p>explorer------ 打开资源管理器</p><p>chkdsk.exe------Chkdsk 磁盘检查</p><p>dcomcnfg------ 打开系统组件服务</p><p>devmgmt.msc------ 设备管理器</p><p>cleanmgr------ 垃圾整理</p><p>compmgmt.msc------ 计算机管理</p><p>secpol.msc------ 本地安全策略</p><p>netstat -an------(TC) 命令检查接口</p><p>taskmgr------ 任务管理器</p><p>mmc------ 打开控制台</p><p>logoff------ 注销命令</p><p>lusrmgr.msc------ 本机用户和组</p><p>dvdplay------DVD 播放器</p><p>diskmgmt.msc------ 磁盘管理实用程序</p><p>dxdiag------ 检查 DirectX 信息</p><p>perfmon.msc------ 计算机性能检测程序</p><p>winver------ 检测 Windows 版本</p><p>write------ 写字板</p><p>wiaacmgr------ 扫描仪和照相机向导</p><p>mspaint------ 画图板</p><p>magnify------ 放大镜实用程序</p><p>utilman------ 辅助工具管理器</p><p>osk------ 打开屏幕键盘</p><p>odbcad32------ODBC 数据源管理器</p><p>Sndvol32 或 Sndvol------ 音量控制程序</p><p>sfc.exe------ 系统文件检查器</p><p>sfc /scannow------Windows 文件保护</p><p>eventvwr------ 事件查看器</p><p>cliconfg------SQL Server 客户端网络实用程序</p><p>certmgr.msc------ 证书管理实用程序</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -150,6 +258,33 @@
             <tag> 好物安利 </tag>
             
             <tag> PearAPI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>非常简单的Python代码</title>
+      <link href="/2022/09/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/pythonjd/"/>
+      <url>/2022/09/20/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/pythonjd/</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录"><a class="markdownIt-Anchor" href="#目录">#</a> 目录</h1><h2 id="让电脑判断并输出"><a class="markdownIt-Anchor" href="#让电脑判断并输出">#</a> 让电脑判断并输出</h2><p>这一段代码主要就是让电脑来判断两个数的大小，然后输出大的那个数。</p><pre><code>要让电脑判断两个数的大小，需要用到if......else语句要电脑输出较大的数，需要用到：print()所以代码就是这样的：if a&gt;b:    print(a)else:    print(b) </code></pre><p>说一下 print 语句的原则:</p><p>print 的开头一定要小写，且括号和双引号都要是英文模式下的。<br>如果要输出字符串， print 的括号里面要加引号</p><p>如：print (“你要去哪里呀？”)<br> 如果要输出变量，括号里不用加引号</p><p>如：</p><pre><code>a=5print(a)结果就是5整合起来的代码a=input(&quot;请输入一个数：&quot;)b=input(&quot;请输入另外一个数:&quot;)if a&gt;b:  print(a)else:  print(b)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
