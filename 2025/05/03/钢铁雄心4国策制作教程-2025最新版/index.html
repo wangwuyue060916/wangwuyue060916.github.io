@@ -1,0 +1,984 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="钢铁雄心 4 国策制作全攻略一、国策系统基础架构（一）文件路径与结构 存储位置：common&#x2F;national_focus&#x2F;xxx.txt  核心组成 12345678910focus_tree &#x3D; &#123;  id &#x3D; mod_focus_tree          # 国策树唯一ID  country &#x3D; &#123; ... &#125;             # 国策树归属国家与权重">
+<meta property="og:type" content="article">
+<meta property="og:title" content="钢铁雄心4国策制作教程(2025最新版)">
+<meta property="og:url" content="http://example.com/2025/05/03/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834%E5%9B%BD%E7%AD%96%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B-2025%E6%9C%80%E6%96%B0%E7%89%88/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="钢铁雄心 4 国策制作全攻略一、国策系统基础架构（一）文件路径与结构 存储位置：common&#x2F;national_focus&#x2F;xxx.txt  核心组成 12345678910focus_tree &#x3D; &#123;  id &#x3D; mod_focus_tree          # 国策树唯一ID  country &#x3D; &#123; ... &#125;             # 国策树归属国家与权重">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/684187a758cb8da5c830a64c.jpg">
+<meta property="article:published_time" content="2025-05-03T11:48:24.000Z">
+<meta property="article:modified_time" content="2025-06-05T12:04:52.051Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="钢铁雄心4">
+<meta property="article:tag" content="国策">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/684187a758cb8da5c830a64c.jpg">
+  
+  
+  
+  <title>钢铁雄心4国策制作教程(2025最新版) - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>初无月のBlog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="钢铁雄心4国策制作教程(2025最新版)"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-05-03 19:48" pubdate>
+          2025年5月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">钢铁雄心4国策制作教程(2025最新版)</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2025年6月5日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="钢铁雄心-4-国策制作全攻略"><a href="#钢铁雄心-4-国策制作全攻略" class="headerlink" title="钢铁雄心 4 国策制作全攻略"></a>钢铁雄心 4 国策制作全攻略</h1><h2 id="一、国策系统基础架构"><a href="#一、国策系统基础架构" class="headerlink" title="一、国策系统基础架构"></a>一、国策系统基础架构</h2><h3 id="（一）文件路径与结构"><a href="#（一）文件路径与结构" class="headerlink" title="（一）文件路径与结构"></a>（一）文件路径与结构</h3><ul>
+<li><p><strong>存储位置</strong>：<code>common/national_focus/xxx.txt</code></p>
+</li>
+<li><p>核心组成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">focus_tree = &#123;<br>  id = mod_focus_tree          # 国策树唯一ID<br>  country = &#123; ... &#125;             # 国策树归属国家与权重配置<br>  Reset_on_civilwar = yes/no    # 内战是否重置国策树<br>  default = no                  # 是否为通用国策树<br>  focus = &#123; ... &#125;               # 普通国策定义<br>  shared_focus = &#123; ... &#125;        # 共享国策定义（可被其他国策树引用）<br>  joint_focus = &#123; ... &#125;         # 联合国策定义（共享国策变种）<br>  continuous_focus = &#123; ... &#125;    # 持续性国策定义<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="（二）核心参数解析"><a href="#（二）核心参数解析" class="headerlink" title="（二）核心参数解析"></a>（二）核心参数解析</h3><table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>作用说明</th>
+<th>示例值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>国策 &#x2F; 国策树唯一标识</td>
+<td><code>id = &quot;GER_rearmament&quot;</code></td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>归属国家与权重配置（<code>factor</code>需保持 0，<code>modifier.add</code>控制阶段性权重）</td>
+<td><code>tag = GER, add = 5</code></td>
+</tr>
+<tr>
+<td><code>prerequisite</code></td>
+<td>前置国策条件（<code>OR</code>用逗号分隔，<code>AND</code>用多个<code>prerequisite</code>标签）</td>
+<td><code>focus = &quot;GER_industrial_expansion&quot;</code></td>
+</tr>
+<tr>
+<td><code>cost</code></td>
+<td>国策持续时间（<code>1=7天</code>，支持小数）</td>
+<td><code>cost = 10</code>（70 天）</td>
+</tr>
+<tr>
+<td><code>ai_will_do</code></td>
+<td>AI 选择倾向（<code>base</code>基础值，<code>modifier</code>条件加成）</td>
+<td><code>base = 1, add = 0.5 if = &#123; has_idea = &quot;war_economy&quot; &#125;</code></td>
+</tr>
+<tr>
+<td><code>completion_reward</code></td>
+<td>完成国策奖励（支持事件触发、国家精神添加等）</td>
+<td><code>country_event = &quot;GER_army_reform&quot;</code></td>
+</tr>
+</tbody></table>
+<h2 id="二、国策类型与配置详解"><a href="#二、国策类型与配置详解" class="headerlink" title="二、国策类型与配置详解"></a>二、国策类型与配置详解</h2><h3 id="（一）普通国策（focus）"><a href="#（一）普通国策（focus）" class="headerlink" title="（一）普通国策（focus）"></a>（一）普通国策（<code>focus</code>）</h3><h4 id="1-基础属性"><a href="#1-基础属性" class="headerlink" title="1. 基础属性"></a>1. 基础属性</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">focus = &#123;<br>  id = &quot;GER_militarization&quot;         # 国策ID<br>  icon = &quot;GFX_focus_militarization&quot;  # 静态图标（需在.gfx文件中注册）<br>  dynamic = yes                      # 启用动态图标（根据条件切换）<br>  text_icon = &quot;default_style&quot;        # 标题栏样式（引用00_titlebar_styles.txt中的定义）<br>  x = 100 y = 200                    # 绝对定位（基于国策树左上角）<br>  relative_position_id = &quot;GER_industrial&quot;  # 相对定位（基于指定国策的坐标偏移）<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-条件与效果"><a href="#2-条件与效果" class="headerlink" title="2. 条件与效果"></a>2. 条件与效果</h4><table>
+<thead>
+<tr>
+<th>功能模块</th>
+<th>代码示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>可点条件</strong></td>
+<td><code>available = &#123; not = &#123; has_war = yes &#125; &#125;</code></td>
+<td>未处于战争状态时可点击</td>
+</tr>
+<tr>
+<td><strong>互斥国策</strong></td>
+<td><code>mutually_exclusive = &#123; focus = &quot;GER_democratic_path&quot; &#125;</code></td>
+<td>与指定国策互斥（双向配置）</td>
+</tr>
+<tr>
+<td><strong>点击效果</strong></td>
+<td><code>select_effect = &#123; add_manpower = 5000 &#125;</code></td>
+<td>增加 5000 人力</td>
+</tr>
+<tr>
+<td><strong>投降后状态</strong></td>
+<td><code>Available_if_capitulated = no</code></td>
+<td>投降后不可点击</td>
+</tr>
+</tbody></table>
+<h3 id="（二）共享国策（shared-focus）"><a href="#（二）共享国策（shared-focus）" class="headerlink" title="（二）共享国策（shared_focus）"></a>（二）共享国策（<code>shared_focus</code>）</h3><ul>
+<li><p><strong>作用</strong>：可被多个国家 &#x2F; 国策树引用的通用国策（如阵营共享国策）。</p>
+</li>
+<li><p>关键配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">shared_focus = &#123;<br>  id = &quot;allies_common_research&quot;<br>  relative_position_id = &quot;shared_start&quot;  # 建议使用相对定位方便引用<br>  completion_reward = &#123;<br>    add_tech_bonus = &#123; category = &quot;industry&quot; bonus = 0.1 &#125;  # 共享科技加成<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="（三）联合国策（joint-focus）"><a href="#（三）联合国策（joint-focus）" class="headerlink" title="（三）联合国策（joint_focus）"></a>（三）联合国策（<code>joint_focus</code>）</h3><ul>
+<li><p><strong>作用</strong>：多国协作国策（如轴心国共同任务），支持差异化奖励。</p>
+</li>
+<li><p>关键配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">joint_focus = &#123;<br>  id = &quot;axis_conquest_plan&quot;<br>  joint_trigger = &#123; tag = GER &#125;  # 指定发起国（德国）<br>  completion_reward = &#123;<br>    # 发起国专属奖励<br>    completion_reward_joint_originator = &#123; add_manpower = 10000 &#125;<br>    # 成员国共享奖励<br>    completion_reward_joint_member = &#123; add_equipment_to_stockpile = &#123; type = motorized_equipment amount = 5000 &#125; &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="（四）持续性国策（continuous-focus）"><a href="#（四）持续性国策（continuous-focus）" class="headerlink" title="（四）持续性国策（continuous_focus）"></a>（四）持续性国策（<code>continuous_focus</code>）</h3><ul>
+<li><p><strong>存储路径</strong>：<code>common/continuous_focus/*.txt</code></p>
+</li>
+<li><p>核心参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">continuous_focus = &#123;<br>  id = &quot;USA_lend_lease&quot;<br>  daily_cost = 2.5              # 每日消耗2.5政治点<br>  modifier = &#123; add_relation = 10 &#125;  # 持续增加盟友关系<br>  cancel_effect = &#123; remove_relation_modifier = &quot;lend_lease_bonus&quot; &#125;  # 取消时移除效果<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="三、常用效果代码速查表"><a href="#三、常用效果代码速查表" class="headerlink" title="三、常用效果代码速查表"></a>三、常用效果代码速查表</h2><h3 id="（一）国家与政治"><a href="#（一）国家与政治" class="headerlink" title="（一）国家与政治"></a>（一）国家与政治</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>代码示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>更改国名</td>
+<td><code>set_cosmetic_tag = &quot;NEW_TAG_DEF&quot;</code></td>
+<td>需同时修改本地化文件中的<code>_DEF</code>和<code>_ADJ</code></td>
+</tr>
+<tr>
+<td>改变意识形态</td>
+<td><code>set_politics = &#123; ruling_party = communist &#125;</code></td>
+<td>切换执政党（如共产主义）</td>
+</tr>
+<tr>
+<td>增加支持度</td>
+<td><code>add_popularity = &#123; ideology = democratic popularity = 0.2 &#125;</code></td>
+<td>民主党支持度 + 20%</td>
+</tr>
+<tr>
+<td>发动内战</td>
+<td><code>start_civil_war = &#123; ideology = fascist size = 0.8 &#125;</code></td>
+<td>法西斯势力发动内战，初始势力 80%</td>
+</tr>
+</tbody></table>
+<h3 id="（二）外交与战争"><a href="#（二）外交与战争" class="headerlink" title="（二）外交与战争"></a>（二）外交与战争</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>代码示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>签订互不侵犯条约</td>
+<td><code>diplomatic_relation = &#123; country = FRA relation = non_aggression_pact active = yes &#125;</code></td>
+<td>与法国签订条约</td>
+</tr>
+<tr>
+<td>创建战争目标</td>
+<td><code>create_wargoal = &#123; type = take_state_focus target = BEL expire = 14 &#125;</code></td>
+<td>获得比利时征服目标（14 天有效期）</td>
+</tr>
+<tr>
+<td>释放傀儡国</td>
+<td><code>宗主国 = &#123; set_autonomy = &#123; target = CZE autonomy_state = autonomy_free &#125; &#125;</code></td>
+<td>释放捷克并赋予完全自治</td>
+</tr>
+<tr>
+<td>增加世界紧张度</td>
+<td><code>add_named_threat = &#123; threat = 0.5 name = &quot;重整军备&quot; &#125;</code></td>
+<td>紧张度 + 0.5，原因标注 “重整军备”</td>
+</tr>
+</tbody></table>
+<h3 id="（三）经济与资源"><a href="#（三）经济与资源" class="headerlink" title="（三）经济与资源"></a>（三）经济与资源</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>代码示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>增加人力</td>
+<td><code>add_manpower = 20000</code></td>
+<td>人力 + 20000</td>
+</tr>
+<tr>
+<td>修建铁路</td>
+<td><code>build_railway = &#123; level = 3 path = &#123; 101 102 103 &#125; &#125;</code></td>
+<td>在地块 101-103 间修建 3 级铁路</td>
+</tr>
+<tr>
+<td>资源使用权转让</td>
+<td><code>give_resource_rights = &#123; receiver = ITA state = 48 &#125;</code></td>
+<td>将地块 48 的资源使用权交给意大利</td>
+</tr>
+<tr>
+<td>增加建筑位</td>
+<td><code>add_extra_state_shared_building_slots = 5 in = 77</code></td>
+<td>地块 77 增加 5 个建筑位</td>
+</tr>
+</tbody></table>
+<h3 id="（四）科技与军事"><a href="#（四）科技与军事" class="headerlink" title="（四）科技与军事"></a>（四）科技与军事</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>代码示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>增加科技加成卡</td>
+<td><code>add_tech_bonus = &#123; category = &quot;armor&quot; bonus = 0.1 uses = 2 &#125;</code></td>
+<td>装甲科技加成 + 10%，2 张加成卡</td>
+</tr>
+<tr>
+<td>生产装备储备</td>
+<td><code>add_equipment_to_stockpile = &#123; type = medium_tank_chassis amount = 1000 producer = GER &#125;</code></td>
+<td>德国生产 1000 辆中坦底盘</td>
+</tr>
+<tr>
+<td>解锁派遣志愿军</td>
+<td><code>set_rule = &#123; can_send_volunteers = yes &#125;</code></td>
+<td>允许派遣志愿军</td>
+</tr>
+</tbody></table>
+<h2 id="四、进阶技巧与注意事项"><a href="#四、进阶技巧与注意事项" class="headerlink" title="四、进阶技巧与注意事项"></a>四、进阶技巧与注意事项</h2><h3 id="（一）定位系统详解"><a href="#（一）定位系统详解" class="headerlink" title="（一）定位系统详解"></a>（一）定位系统详解</h3><ol>
+<li><p><strong>绝对定位</strong>：以国策树左上角为原点（<code>x=0, y=0</code>），<code>y</code>值越大越靠下，<code>x</code>值越大越靠右。</p>
+</li>
+<li><p><strong>相对定位</strong>：基于指定国策的坐标偏移（如<code>relative_position_id = &quot;parent_focus&quot;</code>），适用于分支国策布局。</p>
+</li>
+<li><p>动态定位：通过</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-built_in">offset</span><br></code></pre></td></tr></table></figure>
+
+<p>参数实现条件触发的位置移动（仅开局检测一次）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">offset = &#123; x = 50 y = -30 trigger = &#123; has_idea = &quot;industrial_boom&quot; &#125; &#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="（二）AI-行为控制"><a href="#（二）AI-行为控制" class="headerlink" title="（二）AI 行为控制"></a>（二）AI 行为控制</h3><ul>
+<li><p><strong>基础倾向</strong>：<code>ai_will_do.base</code>控制 AI 点击概率（默认 1，数值越高越优先）。</p>
+</li>
+<li><p>条件修正：通过</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">modifier</span><br></code></pre></td></tr></table></figure>
+
+<p>添加权重加成（如资源充足时优先选择经济国策）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">ai_will_do = &#123;<br>  base = 0.5<br>  modifier = &#123;<br>    if = &#123; stockpile = &#123; steel &gt; 10000 &#125; &#125;<br>    add = 0.8  # 钢铁储备&gt;10000时，AI选择倾向+80%<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="（三）调试与排错"><a href="#（三）调试与排错" class="headerlink" title="（三）调试与排错"></a>（三）调试与排错</h3><ol>
+<li><strong>实时刷新</strong>：修改国策后需手动刷新国策树（快捷键<code>F11</code>或重新加载游戏）。</li>
+<li>冲突排查：<ul>
+<li>互斥国策需双向配置<code>mutually_exclusive</code>。</li>
+<li>动态图标<code>trigger</code>条件需确保至少一个默认生效（如<code>always = yes</code>）。</li>
+</ul>
+</li>
+<li><strong>日志查看</strong>：游戏根目录<code>logs/focus.txt</code>记录国策加载错误信息。</li>
+</ol>
+<h2 id="五、本地化与扩展"><a href="#五、本地化与扩展" class="headerlink" title="五、本地化与扩展"></a>五、本地化与扩展</h2><h3 id="（一）名称与描述本地化"><a href="#（一）名称与描述本地化" class="headerlink" title="（一）名称与描述本地化"></a>（一）名称与描述本地化</h3><ul>
+<li><p><strong>文件路径</strong>：<code>localisation/xxx_l_english.yml</code>（中文为<code>l_simp_chinese.yml</code>）</p>
+</li>
+<li><p>格式示例</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">GER_focus_militarization:0</span> <span class="hljs-string">&quot;重整军备&quot;</span><br><span class="hljs-string">GER_focus_militarization_desc:0</span> <span class="hljs-string">&quot;通过扩大征兵范围提升军力&quot;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="（二）图标与样式配置"><a href="#（二）图标与样式配置" class="headerlink" title="（二）图标与样式配置"></a>（二）图标与样式配置</h3><ol>
+<li><p>图标文件：在gfx&#x2F;interface&#x2F;xxx_gfx.xml中注册图标路径：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">texture</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span>gfx/icons/focus/militarization.png<span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>GFX_focus_militarization<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">texture</span>&gt;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>标题栏样式：在common&#x2F;nation_focus&#x2F;00_titlebar_styles.txt中定义样式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">style = &#123;<br>  name = &quot;war_style&quot;<br>  available = GFX_titlebar_war_available<br>  completed = GFX_titlebar_war_completed<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="六、实战案例：创建基础国策链"><a href="#六、实战案例：创建基础国策链" class="headerlink" title="六、实战案例：创建基础国策链"></a>六、实战案例：创建基础国策链</h2><h3 id="（一）需求说明"><a href="#（一）需求说明" class="headerlink" title="（一）需求说明"></a>（一）需求说明</h3><ul>
+<li>德国国策树中添加 “莱茵兰重新军事化” 国策，要求：<ol>
+<li>前置条件：未加入轴心国，且与法国关系≥-50。</li>
+<li>点击效果：增加 5000 人力，与法国关系 - 20，获得 “莱茵兰要塞” 建筑。</li>
+<li>AI 倾向：当德国陆军规模 &gt; 10 个师时优先选择。</li>
+</ol>
+</li>
+</ul>
+<h3 id="（二）完整代码"><a href="#（二）完整代码" class="headerlink" title="（二）完整代码"></a>（二）完整代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">focus = &#123;<br>  id = &quot;GER_remilitarize_rhineland&quot;<br>  icon = &quot;GFX_focus_remilitarize&quot;<br>  x = 300 y = 150<br>  relative_position_id = &quot;GER_rearmament&quot;  # 位于“重整军备”国策右侧<br>  prerequisite = &#123;<br>    not = &#123; is_in_faction_with = &quot;AXIS&quot; &#125;  # 未加入轴心国<br>    relation = &#123; country = FRA value &gt; -50 &#125;  # 与法国关系≥-50<br>  &#125;<br>  ai_will_do = &#123;<br>    base = 0.3<br>    modifier = &#123;<br>      if = &#123; army_size &gt; 10 &#125;<br>      add = 0.7  # 陆军&gt;10个师时，倾向+70%<br>    &#125;<br>  &#125;<br>  select_effect = &#123;<br>    add_manpower = 5000<br>    diplomatic_relation = &#123; country = FRA relation = &quot;general&quot; value = -20 &#125;<br>    目标地区 = &#123;<br>      add_building_construction = &#123; type = &quot;bunker&quot; level = 1 province = 48 instant_build = yes &#125;<br>    &#125;<br>  &#125;<br>  completion_reward = &#123;<br>    add_idea = &quot;rhineland_fortifications&quot;  # 添加“莱茵兰要塞”国家精神<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>通过以上教程，可系统掌握钢铁雄心 4 国策制作的核心逻辑与实操技巧，建议结合游戏内编辑器（<code>~</code>键打开控制台输入<code>focus</code>命令）进行实时调试。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834/" class="category-chain-item">钢铁雄心4</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
+      
+        <a href="/tags/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834/" class="print-no-link">#钢铁雄心4</a>
+      
+        <a href="/tags/%E5%9B%BD%E7%AD%96/" class="print-no-link">#国策</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>钢铁雄心4国策制作教程(2025最新版)</div>
+      <div>http://example.com/2025/05/03/钢铁雄心4国策制作教程-2025最新版/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年5月3日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年6月5日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/05/Bootstrap4-%E5%85%A5%E9%97%A8%E6%94%BB%E7%95%A5/" title="Bootstrap4 入门攻略">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Bootstrap4 入门攻略</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/04/05/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cjava%E7%89%88%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E7%9A%84%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/" title="我的世界java版服务器搭建的详细教程">
+                        <span class="hidden-mobile">我的世界java版服务器搭建的详细教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://pinglun-ruby.vercel.app/","region":"ap-shanghai","path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <footer> <div style="text-align: center;"> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"> <span>Hexo❤</span> </a> <span>★</span> <span>由初无月制作</span> <br> <span>(≧▽≦)ﾉ</span> <span>ヾ(◍°∇°◍)ﾉﾞ</span> <span>(◕‿◕✿)</span> <br> <marquee behavior="alternate" scrollamount="3">♪(^∇^*) 欢迎来到二次元世界 ♪(^∇^*)</marquee> </div> </footer> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="//static.kevinchu.top/blog/assets/js/stars.js"></script>
+<script src="//static.kevinchu.top/blog/assets/js/typing-effect.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Cherry.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

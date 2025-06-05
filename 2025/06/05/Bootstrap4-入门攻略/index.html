@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Bootstrap4 入门攻略一、Bootstrap4 简介Bootstrap 是全球最受欢迎的前端组件库，用于开发响应式布局和移动设备优先的 Web 项目。Bootstrap4 是其第四代版本，基于 HTML、CSS 和 JavaScript 开发，具备以下核心特性：  Sass 变量与 Mixin：支持自定义样式，提升开发效率。 响应式栅格系统：自动适配不同屏幕尺寸（如手机、平板、桌面）。 预">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bootstrap4 入门攻略">
+<meta property="og:url" content="http://example.com/2025/06/05/Bootstrap4-%E5%85%A5%E9%97%A8%E6%94%BB%E7%95%A5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Bootstrap4 入门攻略一、Bootstrap4 简介Bootstrap 是全球最受欢迎的前端组件库，用于开发响应式布局和移动设备优先的 Web 项目。Bootstrap4 是其第四代版本，基于 HTML、CSS 和 JavaScript 开发，具备以下核心特性：  Sass 变量与 Mixin：支持自定义样式，提升开发效率。 响应式栅格系统：自动适配不同屏幕尺寸（如手机、平板、桌面）。 预">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bootstrapdoc.com/docs/5.0/assets/img/bootstrap-icons.png">
+<meta property="article:published_time" content="2025-06-05T11:40:44.000Z">
+<meta property="article:modified_time" content="2025-06-05T11:57:48.956Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="bootstrap">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="攻略">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bootstrapdoc.com/docs/5.0/assets/img/bootstrap-icons.png">
+  
+  
+  
+  <title>Bootstrap4 入门攻略 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>初无月のBlog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Bootstrap4 入门攻略"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-05 19:40" pubdate>
+          2025年6月5日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Bootstrap4 入门攻略</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2025年6月5日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Bootstrap4-入门攻略"><a href="#Bootstrap4-入门攻略" class="headerlink" title="Bootstrap4 入门攻略"></a>Bootstrap4 入门攻略</h1><h2 id="一、Bootstrap4-简介"><a href="#一、Bootstrap4-简介" class="headerlink" title="一、Bootstrap4 简介"></a>一、Bootstrap4 简介</h2><p><strong>Bootstrap</strong> 是全球最受欢迎的前端组件库，用于开发<strong>响应式布局</strong>和<strong>移动设备优先</strong>的 Web 项目。<br><strong>Bootstrap4</strong> 是其第四代版本，基于 <strong>HTML、CSS 和 JavaScript</strong> 开发，具备以下核心特性：</p>
+<ul>
+<li><strong>Sass 变量与 Mixin</strong>：支持自定义样式，提升开发效率。</li>
+<li><strong>响应式栅格系统</strong>：自动适配不同屏幕尺寸（如手机、平板、桌面）。</li>
+<li><strong>预制组件</strong>：包含导航栏、按钮、表单、模态框等可复用组件。</li>
+<li><strong>jQuery 插件</strong>：提供轮播图、提示框、弹出框等交互功能（需单独引入 jQuery）。</li>
+<li><strong>轻量化</strong>：相比 Bootstrap3，CSS 文件体积减少 <strong>40% 以上</strong>。</li>
+<li><strong>浏览器支持</strong>：放弃对 IE8 和 iOS 6 的支持，最低支持 <strong>IE9+</strong> 和 **iOS 7+**。</li>
+</ul>
+<h2 id="二、适合人群与前置知识"><a href="#二、适合人群与前置知识" class="headerlink" title="二、适合人群与前置知识"></a>二、适合人群与前置知识</h2><h3 id="（一）适合人群"><a href="#（一）适合人群" class="headerlink" title="（一）适合人群"></a>（一）适合人群</h3><ul>
+<li>具备基础 HTML&#x2F;CSS 知识的前端开发者。</li>
+<li>希望快速搭建响应式网站的新手。</li>
+<li>需要开发移动优先项目的工程师。</li>
+</ul>
+<h3 id="（二）前置知识"><a href="#（二）前置知识" class="headerlink" title="（二）前置知识"></a>（二）前置知识</h3><ul>
+<li><strong>必须掌握</strong>：HTML 标签语法、CSS 盒模型与选择器、JavaScript 基础逻辑。</li>
+<li>推荐先学：<ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/html/html-tutorial.html">HTML 教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-tutorial.html">CSS 教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/js/js-tutorial.html">JavaScript 教程</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="三、快速入门步骤"><a href="#三、快速入门步骤" class="headerlink" title="三、快速入门步骤"></a>三、快速入门步骤</h2><h3 id="（一）引入-Bootstrap-资源"><a href="#（一）引入-Bootstrap-资源" class="headerlink" title="（一）引入 Bootstrap 资源"></a>（一）引入 Bootstrap 资源</h3><h4 id="1-在线-CDN-引入（推荐）"><a href="#1-在线-CDN-引入（推荐）" class="headerlink" title="1. 在线 CDN 引入（推荐）"></a>1. 在线 CDN 引入（推荐）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- CSS 文件 --&gt;</span>  <br><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css&quot;</span>&gt;</span>  <br><span class="hljs-comment">&lt;!-- jQuery（Bootstrap 插件依赖） --&gt;</span>  <br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>  <br><span class="hljs-comment">&lt;!-- Bootstrap JS 文件 --&gt;</span>  <br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>  <br></code></pre></td></tr></table></figure>
+
+<h4 id="2-本地下载安装"><a href="#2-本地下载安装" class="headerlink" title="2. 本地下载安装"></a>2. 本地下载安装</h4><ul>
+<li><p>官网下载地址：<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.6/getting-started/download/">Bootstrap4 官方下载</a></p>
+</li>
+<li><p>解压后目录结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">bootstrap/  <br>  ├── css/          # 样式文件（包含压缩版和未压缩版）  <br>  ├── js/           # JavaScript 文件（包含压缩版和未压缩版）  <br>  └── fonts/        # 图标字体文件  <br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="（二）第一个-Bootstrap-页面示例"><a href="#（二）第一个-Bootstrap-页面示例" class="headerlink" title="（二）第一个 Bootstrap 页面示例"></a>（二）第一个 Bootstrap 页面示例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>  <br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;zh-CN&quot;</span>&gt;</span>  <br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>  <br>    <span class="hljs-comment">&lt;!-- 关键：设置视口适配移动端 --&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>我的第一个 Bootstrap 页面<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>  <br>    <span class="hljs-comment">&lt;!-- 引入 Bootstrap CSS --&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css&quot;</span>&gt;</span>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>  <br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>  <br>    <span class="hljs-comment">&lt;!-- 响应式巨幕组件（Jumbotron） --&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;jumbotron text-center&quot;</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>我的第一个 Bootstrap 页面<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>调整浏览器窗口大小，查看响应式效果！<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br><br>    <span class="hljs-comment">&lt;!-- 容器（Container）与栅格系统（Row + Column） --&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>  <br>            <span class="hljs-comment">&lt;!-- 小屏幕（sm）下每列占 4 格（总 12 格） --&gt;</span>  <br>            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-sm-4&quot;</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>第一列<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>学的不仅是技术，更是梦想！！！<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-sm-4&quot;</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>第二列<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>学的不仅是技术，更是梦想！！！<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-sm-4&quot;</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>第三列<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>学的不仅是技术，更是梦想！！！<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>  <br></code></pre></td></tr></table></figure>
+
+<p><strong>效果说明</strong>：</p>
+<ul>
+<li>拖动浏览器窗口，会自动适应不同屏幕尺寸（手机、平板、桌面）。</li>
+<li><code>.container</code> 用于固定宽度并居中内容，<code>.row</code> 定义行，<code>.col-sm-4</code> 定义小屏幕下占 4 列。</li>
+</ul>
+<h2 id="四、核心知识点概览"><a href="#四、核心知识点概览" class="headerlink" title="四、核心知识点概览"></a>四、核心知识点概览</h2><h3 id="（一）栅格系统"><a href="#（一）栅格系统" class="headerlink" title="（一）栅格系统"></a>（一）栅格系统</h3><p>Bootstrap4 采用 <strong>12 列栅格布局</strong>，通过不同屏幕尺寸的类名实现响应式：</p>
+<table>
+<thead>
+<tr>
+<th>类名前缀</th>
+<th>屏幕尺寸</th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>col-</code></td>
+<td>所有尺寸</td>
+<td>超小屏幕（手机）</td>
+</tr>
+<tr>
+<td><code>col-sm-</code></td>
+<td>≥576px</td>
+<td>小屏幕（平板）</td>
+</tr>
+<tr>
+<td><code>col-md-</code></td>
+<td>≥768px</td>
+<td>中等屏幕（桌面）</td>
+</tr>
+<tr>
+<td><code>col-lg-</code></td>
+<td>≥992px</td>
+<td>大屏幕</td>
+</tr>
+<tr>
+<td><code>col-xl-</code></td>
+<td>≥1200px</td>
+<td>超大屏幕</td>
+</tr>
+</tbody></table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-12 col-sm-6 col-md-4&quot;</span>&gt;</span>在手机占满屏，平板占 6 列，桌面占 4 列<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br></code></pre></td></tr></table></figure>
+
+<h3 id="（二）常用组件"><a href="#（二）常用组件" class="headerlink" title="（二）常用组件"></a>（二）常用组件</h3><ol>
+<li><p><strong>按钮（Button）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span>&gt;</span>主按钮<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>  <br><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-secondary&quot;</span>&gt;</span>次按钮<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>  <br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>颜色类：<code>btn-primary</code>（主色）、<code>btn-secondary</code>（次色）、<code>btn-success</code>（成功色）等。</li>
+</ul>
+</li>
+<li><p><strong>导航栏（Navbar）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar navbar-expand-lg navbar-light bg-light&quot;</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar-brand&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>导航标题<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar-toggler&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">&quot;collapse&quot;</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">&quot;#navbarNav&quot;</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar-toggler-icon&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;collapse navbar-collapse&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;navbarNav&quot;</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar-nav&quot;</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-item active&quot;</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>首页<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-item&quot;</span>&gt;</span>  <br>                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-link&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>关于<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>  <br>            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>  <br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>卡片（Card）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 18rem;&quot;</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-img-top&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;图片&quot;</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-body&quot;</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-title&quot;</span>&gt;</span>卡片标题<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>  <br>        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-text&quot;</span>&gt;</span>卡片内容...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  <br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  <br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="五、学习资源推荐"><a href="#五、学习资源推荐" class="headerlink" title="五、学习资源推荐"></a>五、学习资源推荐</h2><ul>
+<li><strong>官方文档</strong>：<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.6/">Bootstrap4 官方文档</a></li>
+<li><strong>菜鸟教程示例</strong>：<a target="_blank" rel="noopener" href="https://www.runoob.com/bootstrap4/bootstrap4-tutorial.html">Bootstrap4 实例</a>（包含代码可直接运行）</li>
+<li><strong>视频教程</strong>：B 站搜索 “Bootstrap4 入门到实战”（推荐零基础课程）</li>
+</ul>
+<h2 id="六、实践建议"><a href="#六、实践建议" class="headerlink" title="六、实践建议"></a>六、实践建议</h2><ol>
+<li><strong>从模仿开始</strong>：参考官网示例或开源模板（如 <a target="_blank" rel="noopener" href="https://startbootstrap.com/">Start Bootstrap</a>），拆解页面结构。</li>
+<li><strong>动手练习</strong>：尝试用栅格系统布局一个简单博客页面，或用卡片组件制作产品列表。</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/bootstrap/" class="category-chain-item">bootstrap</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/bootstrap/" class="print-no-link">#bootstrap</a>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
+      
+        <a href="/tags/%E6%94%BB%E7%95%A5/" class="print-no-link">#攻略</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Bootstrap4 入门攻略</div>
+      <div>http://example.com/2025/06/05/Bootstrap4-入门攻略/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月5日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年6月5日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/05/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834%E5%86%B3%E8%AE%AE%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/" title="钢铁雄心4决议制作教程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">钢铁雄心4决议制作教程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/05/03/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834%E5%9B%BD%E7%AD%96%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B-2025%E6%9C%80%E6%96%B0%E7%89%88/" title="钢铁雄心4国策制作教程(2025最新版)">
+                        <span class="hidden-mobile">钢铁雄心4国策制作教程(2025最新版)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://pinglun-ruby.vercel.app/","region":"ap-shanghai","path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <footer> <div style="text-align: center;"> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"> <span>Hexo❤</span> </a> <span>★</span> <span>由初无月制作</span> <br> <span>(≧▽≦)ﾉ</span> <span>ヾ(◍°∇°◍)ﾉﾞ</span> <span>(◕‿◕✿)</span> <br> <marquee behavior="alternate" scrollamount="3">♪(^∇^*) 欢迎来到二次元世界 ♪(^∇^*)</marquee> </div> </footer> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="//static.kevinchu.top/blog/assets/js/stars.js"></script>
+<script src="//static.kevinchu.top/blog/assets/js/typing-effect.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Cherry.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,801 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="钢铁雄心 4 决议组制作教程一、决议组基础概念（一）核心组成决议组由两部分构成：  决议组（Category）：用于分类管理具体决议，类似 “百宝袋”（如 “经济政策”“军事行动”）。 具体决议（Decision）：包含实际效果的执行代码（如 “修建铁路”“宣战”），隶属于某个决议组。  （二）文件路径 决议组注册文件：common&#x2F;decisions&#x2F;categories&#x2F;[文件名].txt 具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="钢铁雄心4决议制作教程">
+<meta property="og:url" content="http://example.com/2025/06/05/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834%E5%86%B3%E8%AE%AE%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="钢铁雄心 4 决议组制作教程一、决议组基础概念（一）核心组成决议组由两部分构成：  决议组（Category）：用于分类管理具体决议，类似 “百宝袋”（如 “经济政策”“军事行动”）。 具体决议（Decision）：包含实际效果的执行代码（如 “修建铁路”“宣战”），隶属于某个决议组。  （二）文件路径 决议组注册文件：common&#x2F;decisions&#x2F;categories&#x2F;[文件名].txt 具">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/6841879058cb8da5c830a640.jpg">
+<meta property="article:published_time" content="2025-06-05T11:59:25.000Z">
+<meta property="article:modified_time" content="2025-06-05T12:03:39.300Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="钢铁雄心4">
+<meta property="article:tag" content="决议">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/6841879058cb8da5c830a640.jpg">
+  
+  
+  
+  <title>钢铁雄心4决议制作教程 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/scroll.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/gradient.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>初无月のBlog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="钢铁雄心4决议制作教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-05 19:59" pubdate>
+          2025年6月5日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">钢铁雄心4决议制作教程</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2025年6月5日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="钢铁雄心-4-决议组制作教程"><a href="#钢铁雄心-4-决议组制作教程" class="headerlink" title="钢铁雄心 4 决议组制作教程"></a>钢铁雄心 4 决议组制作教程</h1><h2 id="一、决议组基础概念"><a href="#一、决议组基础概念" class="headerlink" title="一、决议组基础概念"></a>一、决议组基础概念</h2><h3 id="（一）核心组成"><a href="#（一）核心组成" class="headerlink" title="（一）核心组成"></a>（一）核心组成</h3><p>决议组由两部分构成：</p>
+<ol>
+<li><strong>决议组（Category）</strong>：用于分类管理具体决议，类似 “百宝袋”（如 “经济政策”“军事行动”）。</li>
+<li><strong>具体决议（Decision）</strong>：包含实际效果的执行代码（如 “修建铁路”“宣战”），隶属于某个决议组。</li>
+</ol>
+<h3 id="（二）文件路径"><a href="#（二）文件路径" class="headerlink" title="（二）文件路径"></a>（二）文件路径</h3><ul>
+<li><strong>决议组注册文件</strong>：<code>common/decisions/categories/[文件名].txt</code></li>
+<li><strong>具体决议文件</strong>：<code>common/decisions/[文件名].txt</code></li>
+</ul>
+<h2 id="二、决议组注册教程"><a href="#二、决议组注册教程" class="headerlink" title="二、决议组注册教程"></a>二、决议组注册教程</h2><h3 id="（一）创建决议组文件"><a href="#（一）创建决议组文件" class="headerlink" title="（一）创建决议组文件"></a>（一）创建决议组文件</h3><p>在 <code>categories</code> 目录下新建文件（如 <code>my_mod_decisions_categories.txt</code>），内容示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">decision_categories = &#123;  <br>  # 决议组ID：my_mod_military_decisions（需唯一）  <br>  my_mod_military_decisions = &#123;  <br>    name = &quot;决议组名称&quot;          # 显示在游戏中的名称（需本地化）  <br>    description = &quot;决议组描述&quot;   # 可选，决议组详细说明  <br>    icon = &quot;GFX_icon_military&quot;   # 图标（需在.gfx文件中注册）  <br>    # 排序优先级（数值越小越靠前）  <br>    position = 10  <br>  &#125;  <br>&#125;  <br></code></pre></td></tr></table></figure>
+
+<h3 id="（二）本地化配置"><a href="#（二）本地化配置" class="headerlink" title="（二）本地化配置"></a>（二）本地化配置</h3><p>在 <code>localisation/[语言].yml</code> 中添加文本定义：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">my_mod_military_decisions:0</span> <span class="hljs-string">&quot;军事决议组&quot;</span>  <br><span class="hljs-string">my_mod_military_decisions_desc:0</span> <span class="hljs-string">&quot;包含军事相关的各类决议&quot;</span>  <br></code></pre></td></tr></table></figure>
+
+<h2 id="三、具体决议编写流程"><a href="#三、具体决议编写流程" class="headerlink" title="三、具体决议编写流程"></a>三、具体决议编写流程</h2><h3 id="（一）创建决议文件"><a href="#（一）创建决议文件" class="headerlink" title="（一）创建决议文件"></a>（一）创建决议文件</h3><p>在 <code>decisions</code> 目录下新建文件（如 <code>my_mod_military_decisions.txt</code>），代码结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">decisions = &#123;  <br>  # 具体决议ID：build_railway（需唯一）  <br>  build_railway = &#123;  <br>    # 决议基本信息  <br>    name = &quot;决议名称&quot;  <br>    description = &quot;决议描述&quot;  <br>    icon = &quot;GFX_icon_railway&quot;  <br>    category = my_mod_military_decisions  # 关联决议组ID  <br>    # 解锁条件（决议可见/可点的前提）  <br>    available = &#123;  <br>      has_technology = &quot;industrial_revolution&quot;  # 拥有工业革命科技  <br>      NOT = &#123; has_idea = &quot;railway_obsolescence&quot; &#125;  # 没有铁路过时精神  <br>    &#125;  <br>    # 执行效果  <br>    effect = &#123;  <br>      build_railway = &#123; level = 3 path = &#123; 101 102 103 &#125; &#125;  # 在地块101-103修建3级铁路  <br>      add_manpower = 1000  # 增加1000人力  <br>    &#125;  <br>    # 其他参数  <br>    cost = 50  # 消耗50政治点  <br>    ai_will_do = &#123; base = 0.8 &#125;  # AI选择倾向（0.8为较高优先级）  <br>  &#125;  <br>&#125;  <br></code></pre></td></tr></table></figure>
+
+<h3 id="（二）关键参数说明"><a href="#（二）关键参数说明" class="headerlink" title="（二）关键参数说明"></a>（二）关键参数说明</h3><table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>作用</th>
+<th>示例值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>category</code></td>
+<td>归属的决议组 ID</td>
+<td><code>category = my_mod_economic_decisions</code></td>
+</tr>
+<tr>
+<td><code>available</code></td>
+<td>决议可点条件（支持逻辑运算符<code>AND</code>&#x2F;<code>OR</code>&#x2F;<code>NOT</code>）</td>
+<td><code>available = &#123; country_size &gt; 5 AND has_idea = &quot;central_planning&quot; &#125;</code></td>
+</tr>
+<tr>
+<td><code>effect</code></td>
+<td>决议执行效果（核心部分，支持国策、事件、资源修改等）</td>
+<td><code>effect = &#123; add_equipment_to_stockpile = &#123; type = &quot;infantry_equipment&quot; amount = 2000 &#125; &#125;</code></td>
+</tr>
+<tr>
+<td><code>cost</code></td>
+<td>执行决议消耗的资源（政治点、人力等）</td>
+<td><code>cost = &#123; political_power = 30 &#125;</code></td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>决议图标（需在<code>.gfx</code>文件中注册路径）</td>
+<td><code>icon = &quot;GFX_decision_railway&quot;</code></td>
+</tr>
+</tbody></table>
+<h2 id="四、进阶技巧：决议组-GUI-搭配"><a href="#四、进阶技巧：决议组-GUI-搭配" class="headerlink" title="四、进阶技巧：决议组 GUI 搭配"></a>四、进阶技巧：决议组 GUI 搭配</h2><p>结合 <strong>决议类型 GUI</strong>（上节课内容），可定制化显示效果：</p>
+<ol>
+<li><p>在interface&#x2F;buttons.xml 中定义按钮样式：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>  <br>  <span class="hljs-tag">&lt;<span class="hljs-name">normal</span>&gt;</span>gfx/interface/buttons/railway_btn_normal.png<span class="hljs-tag">&lt;/<span class="hljs-name">normal</span>&gt;</span>  <br>  <span class="hljs-tag">&lt;<span class="hljs-name">hover</span>&gt;</span>gfx/interface/buttons/railway_btn_hover.png<span class="hljs-tag">&lt;/<span class="hljs-name">hover</span>&gt;</span>  <br>  <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>GFX_decision_railway<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>  <br></code></pre></td></tr></table></figure>
+</li>
+<li><p>在决议代码中引用 GUI 元素：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">build_railway = &#123;  <br>  gui = &#123;  <br>    button = &quot;GFX_decision_railway&quot;  # 引用自定义按钮  <br>    position = &#123; x = 200 y = 150 &#125;    # 在决议界面中的坐标  <br>  &#125;  <br>&#125;  <br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="五、常见问题与交流"><a href="#五、常见问题与交流" class="headerlink" title="五、常见问题与交流"></a>五、常见问题与交流</h2><h3 id="（一）报错排查"><a href="#（一）报错排查" class="headerlink" title="（一）报错排查"></a>（一）报错排查</h3><ol>
+<li>决议组未显示：<ul>
+<li>检查决议组 ID 是否拼写错误（区分大小写）。</li>
+<li>确认本地化文本键名与代码中的 ID 一致。</li>
+</ul>
+</li>
+<li>效果未触发：<ul>
+<li>使用控制台命令 <code>debug_decisions</code> 强制显示所有决议，排查 <code>available</code> 条件是否满足。</li>
+<li>通过 <code>event debug 1</code> 输出决议执行日志。</li>
+</ul>
+</li>
+</ol>
+<h2 id="六、实战案例：快速创建-“秘密军事工业”-决议组"><a href="#六、实战案例：快速创建-“秘密军事工业”-决议组" class="headerlink" title="六、实战案例：快速创建 “秘密军事工业” 决议组"></a>六、实战案例：快速创建 “秘密军事工业” 决议组</h2><h3 id="（一）需求说明"><a href="#（一）需求说明" class="headerlink" title="（一）需求说明"></a>（一）需求说明</h3><ul>
+<li>决议组名称：“秘密军事工业”</li>
+<li>包含 1 个具体决议：“发行梅福券”（效果：增加 5000 工业产能，消耗 30 政治点，AI 倾向 0.6）</li>
+</ul>
+<h3 id="（二）完整代码"><a href="#（二）完整代码" class="headerlink" title="（二）完整代码"></a>（二）完整代码</h3><h4 id="1-决议组注册（categories-secret-military-txt）"><a href="#1-决议组注册（categories-secret-military-txt）" class="headerlink" title="1. 决议组注册（categories/secret_military.txt）"></a>1. 决议组注册（<code>categories/secret_military.txt</code>）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">decision_categories = &#123;  <br>  secret_military_ind = &#123;  <br>    name = &quot;secret_military_ind_name&quot;  <br>    description = &quot;secret_military_ind_desc&quot;  <br>    icon = &quot;GFX_icon_secret_industry&quot;  <br>    position = 20  <br>  &#125;  <br>&#125;  <br></code></pre></td></tr></table></figure>
+
+<h4 id="2-具体决议（decisions-issue-mayfoo-cheques-txt）"><a href="#2-具体决议（decisions-issue-mayfoo-cheques-txt）" class="headerlink" title="2. 具体决议（decisions/issue_mayfoo_cheques.txt）"></a>2. 具体决议（<code>decisions/issue_mayfoo_cheques.txt</code>）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">decisions = &#123;  <br>  issue_mayfoo_cheques = &#123;  <br>    name = &quot;issue_mayfoo_cheques_name&quot;  <br>    description = &quot;issue_mayfoo_cheques_desc&quot;  <br>    icon = &quot;GFX_icon_mayfoo_cheque&quot;  <br>    category = secret_military_ind  <br>    available = &#123;  <br>      NOT = &#123; is_at_war = yes &#125;  # 未处于战争状态  <br>      political_power &gt; 30       # 政治点&gt;30  <br>    &#125;  <br>    effect = &#123;  <br>      add_industrial_capacity = 5000  # 增加5000工业产能  <br>      remove_political_power = 30     # 消耗30政治点  <br>    &#125;  <br>    cost = &#123; political_power = 30 &#125;  <br>    ai_will_do = &#123; base = 0.6 &#125;  <br>  &#125;  <br>&#125;  <br></code></pre></td></tr></table></figure>
+
+<h4 id="3-本地化（localisation-simp-chinese-yml）"><a href="#3-本地化（localisation-simp-chinese-yml）" class="headerlink" title="3. 本地化（localisation/simp_chinese.yml）"></a>3. 本地化（<code>localisation/simp_chinese.yml</code>）</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">secret_military_ind_name:0</span> <span class="hljs-string">&quot;秘密军事工业&quot;</span>  <br><span class="hljs-string">secret_military_ind_desc:0</span> <span class="hljs-string">&quot;管理秘密军事工业的相关决议&quot;</span>  <br><span class="hljs-string">issue_mayfoo_cheques_name:0</span> <span class="hljs-string">&quot;发行梅福券&quot;</span>  <br><span class="hljs-string">issue_mayfoo_cheques_desc:0</span> <span class="hljs-string">&quot;通过账外本票运作资金发展军事工业&quot;</span>  <br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834/" class="category-chain-item">钢铁雄心4</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B/" class="print-no-link">#教程</a>
+      
+        <a href="/tags/%E9%92%A2%E9%93%81%E9%9B%84%E5%BF%834/" class="print-no-link">#钢铁雄心4</a>
+      
+        <a href="/tags/%E5%86%B3%E8%AE%AE/" class="print-no-link">#决议</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>钢铁雄心4决议制作教程</div>
+      <div>http://example.com/2025/06/05/钢铁雄心4决议制作教程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月5日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年6月5日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/05/Bootstrap4-%E5%85%A5%E9%97%A8%E6%94%BB%E7%95%A5/" title="Bootstrap4 入门攻略">
+                        <span class="hidden-mobile">Bootstrap4 入门攻略</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://pinglun-ruby.vercel.app/","region":"ap-shanghai","path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <footer> <div style="text-align: center;"> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"> <span>Hexo❤</span> </a> <span>★</span> <span>由初无月制作</span> <br> <span>(≧▽≦)ﾉ</span> <span>ヾ(◍°∇°◍)ﾉﾞ</span> <span>(◕‿◕✿)</span> <br> <marquee behavior="alternate" scrollamount="3">♪(^∇^*) 欢迎来到二次元世界 ♪(^∇^*)</marquee> </div> </footer> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="//static.kevinchu.top/blog/assets/js/stars.js"></script>
+<script src="//static.kevinchu.top/blog/assets/js/typing-effect.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/Cherry.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/containsWord.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/EmoryHuang/BlogBeautify@1.1/DynamicRibbon.min.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
